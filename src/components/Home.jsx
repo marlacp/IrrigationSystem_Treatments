@@ -4,7 +4,8 @@ import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import cebolla from '../assets/static/cebolla.jpg';
 import Lechuga from '../assets/static/Lechuga.jpg';
-import maiz from '../assets/static/maiz.jpg';
+// import maiz from '../assets/static/maiz.jpg';
+import banner from '../assets/static/banner.png';
 import '../assets/styles/Home-style.css';
 
 const proprietes = {
@@ -19,21 +20,31 @@ const Home = () => {
     <div className='GridWrapper2'>
       <div className='containerSlide'>
         <Slide {...proprietes}>
+
+        <div className='each-slide'>
+            <div>
+              <img src={banner} alt='banner' />
+            </div>
+          </div>          
+
           <div className='each-slide'>
             <div>
               <img src={cebolla} alt='cebolla' />
             </div>
           </div>
+
           <div className='each-slide'>
             <div>
               <img src={Lechuga} alt='Lechuga' />
             </div>
           </div>
-          <div className='each-slide'>
+
+          {/* <div className='each-slide'>
             <div>
               <img src={maiz} alt='maiz' />
             </div>
-          </div>
+          </div> */}
+
         </Slide>
 
       </div>

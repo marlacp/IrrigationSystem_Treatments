@@ -5,7 +5,7 @@
 import React from 'react';
 import '../assets/styles/treatments-style.css';
 import { Link } from 'react-router-dom';
-import tratamiento from '../assets/static/tratamiento.png';
+import tratamiento from '../assets/static/Treatment.jpg';
 // import CTChartTable from './treatments_chart_table';
 class treatmentsComponent extends React.Component {
 

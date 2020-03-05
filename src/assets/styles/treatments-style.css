@@ -50,11 +50,13 @@
 .post-image {
     /*la clase figure trae margen y no se necesita*/
     margin: 0;
+    
   }
   .post-image img {
     /*aqui va el tamaño de la imagen
     100% quiere decir el mismo tamaño del post*/
     width: 100%;
+    height: 173px;
     vertical-align: top;
   }
   .post-overlay {
@@ -85,7 +87,8 @@
     font-weight: bold;/*peso de fuente negrita*/
     text-align: center;/*alinear en el centro*/
     display: inline-block;/*para que este uno al costado del otro*/
-    color: #1b262c;
+    /* color: #1b262c; */
+    color: white;
     font-weight: 750;
     font-family: sans-serif;
     font-size: larger;

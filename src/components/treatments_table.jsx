@@ -131,12 +131,12 @@ class TreatmentTable extends React.Component{
                     </table>
                     )}
                 </div>
-                { data.length > 0 && (
+                {/* { data.length > 0 && (
 
                 <CSVLink data={data} headers={headers} separator={";"}>
                 Download me
                 </CSVLink>
-                )}
+                )} */}
                 </div>
 
            </React.Fragment> 
