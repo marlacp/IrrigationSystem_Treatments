@@ -1,0 +1,27 @@
+.GridWrapper2{
+    background-color: #f9f6f7;
+}
+
+.containerSlide {
+    width: 650px;
+    margin: auto;
+    /* margin-left: 300px; */
+    padding-top: 10px;
+    padding-left: 10px;
+
+}
+
+.containerSlide img {
+    height: 500px;
+
+
+}
+
+.info{
+    padding-left: 50px;
+    padding-top: 150px;
+    width: 500px;
+    text-align: center;
+    font-style: italic;
+    color: #9c9c9c;
+}

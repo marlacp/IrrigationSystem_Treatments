@@ -1,0 +1,22 @@
+.ContainerTable{
+    width: 1000px;
+    margin: 0 auto;
+    /* display: inherit; */
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+    /* background-color: #effcef; */
+}
+
+/* no espacios en la tabla */
+#dtHorizontalVerticalExample th, td {
+    white-space: nowrap;
+    /* position: fixed */
+    }
+    .tableFixHead          { overflow-y: auto; height: 400px; width: 1000px;}
+    .tableFixHead thead th { position: sticky; top: 0; }
+    
+    /* Just common table stuff. Really. */
+    table  { border-collapse: collapse; width: 100%; }
+    th, td { padding: 8px 16px; }
+    th     { background:#eee; }

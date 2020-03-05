@@ -1,0 +1,40 @@
+.Navbar__brand-logo{
+    margin-right: 0.7rem;
+    width: 12%;
+    background-image: none;
+  }
+
+  .contact {
+    background-color: #6f9a8d;
+    font-family: sans-serif;
+    color: #f4f4f4;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  
+.container {
+  /* border: 1px solid red; */
+  width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+  
+}
+
+.footer {
+  color: white;
+  background-color: #eafbea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer img {
+  vertical-align: middle;
+}

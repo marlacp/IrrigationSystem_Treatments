@@ -1,0 +1,97 @@
+.containerPage{
+    width: 800px;
+    margin: 0 auto;
+    /* display: inherit; */
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+  
+}
+
+.titulo{
+  font-family:  Geneva, Arial, Helvetica, sans-serif;
+  padding-top:20px;
+  padding-bottom: 0;
+  text-align: left;
+  color: #1f6650;
+  font-weight: 535;
+}
+.Background{
+  background-color: #f9f6f7;
+  padding: 0;
+  margin: 0;
+  height: 550px;
+}
+.containergrid{
+    display: grid;
+    /*grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 300px 300px;
+    
+    */
+
+    margin-top: 50px;
+    margin-bottom: 70px;
+    grid-template-columns: repeat(2, minmax(100px, 293px));
+    justify-content: center; /*crentra la grilla*/
+    grid-gap: 28px; /*separacion de grilla*/
+}
+/* // .item {
+//     background: lightblue;
+//     padding: 10px;
+//     border: 1px solid red;
+// } */
+
+.post {
+    /*cursor: pointer sale la manito en vez de la flecha de cursor cada ves que le demos en el post*/
+    cursor: pointer;
+    position: relative;
+    display: block;
+  }
+.post-image {
+    /*la clase figure trae margen y no se necesita*/
+    margin: 0;
+  }
+  .post-image img {
+    /*aqui va el tamaño de la imagen
+    100% quiere decir el mismo tamaño del post*/
+    width: 100%;
+    vertical-align: top;
+  }
+  .post-overlay {
+    /*es lo que esta encima de la imagen donde podemos ver los comentarios*/
+    position: absolute;
+    /*a continuacion lo pone en cero para que tome la pocicion relativa del post*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0; 
+    /*display: none;*//*para que no se vea el elemento de los likes y comentarios*/
+    align-items: center;/*para que el like y el comentarios se vea centrado*/
+    justify-content: center;/*para que el like y el comentarios se vea centrado*/
+    /* // color: white; */
+    text-align: center;
+
+  }
+
+   /* .post:hover .post-overlay {
+     display: flex;
+   } */
+  /*estilos a los likes y comentarios*/
+
+  .post-comments {
+    width: 293px;
+    height: 175px;
+    margin: 0px;
+    font-weight: bold;/*peso de fuente negrita*/
+    text-align: center;/*alinear en el centro*/
+    display: inline-block;/*para que este uno al costado del otro*/
+    color: #1b262c;
+    font-weight: 750;
+    font-family: sans-serif;
+    font-size: larger;
+  }
+
+  button{
+    background-color: transparent;
+    color: white;
+  }
