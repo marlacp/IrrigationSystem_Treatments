@@ -53,7 +53,11 @@ class TreatmentChart extends React.Component{
     
         var Yaxis2 = (this.props.Yaxis);
         var DateTime = [];
-    
+        
+        if (datadic === null){
+            return null;
+        }
+
         if (Yaxis2 === null){
             return null;
         }

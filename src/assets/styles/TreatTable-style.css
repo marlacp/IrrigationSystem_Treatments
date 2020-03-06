@@ -20,3 +20,10 @@
     table  { border-collapse: collapse; width: 100%; }
     th, td { padding: 8px 16px; }
     th     { background:#eee; }
+
+    .buttondown{
+        color: white;
+        margin-top: 25px;
+        padding: 10px;
+        background-color: #419980;
+    }

@@ -55,7 +55,7 @@ input[type="checkbox"]:disabled + .label-text:before{
 	margin-top: 40px;
 	width: 155%;
 	padding: 10px;
-	background-color: #eafbea;
+	/* background-color: #eafbea; */
 }
 
 .styleInfo{

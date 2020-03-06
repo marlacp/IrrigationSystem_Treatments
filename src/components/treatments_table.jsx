@@ -1,29 +1,21 @@
-/* eslint-disable default-case */
+
 /* eslint-disable array-callback-return */
 import React from 'react';
 import '../assets/styles/TreatTable-style.css';
+// libreria para descargar en archivo csv
 import { CSVLink, CSVDownload } from "react-csv";
 class TreatmentTable extends React.Component{
     render(){
         var dataTab = {};
         dataTab = (this.props.data);
-        var data = {};
-        // console.log(dataTab)
-        
-        // var headers = [
-        //     { label: "First Name", key: "firstname" },
-        //     { label: "Last Name", key: "lastname" },
-        //     { label: "Email", key: "email" }
-        //   ];
-           
-          
-        // var data = [
-        //     { firstname: "Ahmed", lastname: "0.122", email: "ah@smthing.co.com" },
-        //     { firstname: "Raed", lastname: "Labes", email: "rl@smthing.co.com" },
-        //     { firstname: "Yezzi", lastname: "Min l3b", email: "ymin@cocococo.com" }
-        //   ]
 
+        if (dataTab === null){
+            return null;
+        }
+// Creacion de las columnas del archivo cssv
         var headers = [
+
+            { label: "user", key: "user" },
             { label: "Treatment", key: "Treatment" },
             { label: "Longitude", key: "Longitude" },
             { label: "Latitude", key: "Latitude" },
@@ -32,7 +24,7 @@ class TreatmentTable extends React.Component{
             { label: "Soil Temp (°C)", key: "Soil_Temp" },
             { label: "Env Temp (°C)", key: "Env_Temp" },
             { label: "RH (%)", key: "RH" },
-            { label: "CO2 (PPM)", key: "CO2" },
+            // { label: "CO2 (PPM)", key: "CO2" },
             { label: "Canopy Temp (°C)", key: "Canopy_Temp" },
             { label: "CS Temp (°C)", key: "CS_Temp" },
             { label: "Irrig Pres Rate (mm)", key: "Irrig_Pres_Rate" },
@@ -40,47 +32,19 @@ class TreatmentTable extends React.Component{
             { label: "DateTime (YYYY-MM-DD hh:mm:ss)", key: "Date_Time" },
           ];
 
-          if (dataTab.length>0){
-            dataTab.map(
-                function(item, i){
-                 data = [
-                    {Treatment: item["Treatment"], Longitude: item["Longitude"], Latitude: item["Latitude"],
-                    SM_Depth_1: item["SM_Depth_1"],  SM_Depth_2: item["SM_Depth_2"], Soil_Temp: item["Soil_Temp"], Env_Temp: item["Env_Temp "],
-                    RH: item["RH"], CO2: item["CO2"], Canopy_Temp: item["Canopy_Temp"], CS_Temp: item["CS_Temp"], 
-                    Irrig_Pres_Rate: item["Irrig_Pres_Rate"], Irrig_Pres_Time: item["Irrig_Pres_Time"], Date_Time: item["Date_Time"]
-                 }
-            
-     
-                  ]
-                }
-            );
-            }
-           
-    // if (dataTab.length>0){
-    //     dataTab.map(
-    //         function(item, i){
-    //          data = [
-    //             {Treatment: item["Treatment"], Longitude: item["Longitude"], Latitude: item["Latitude"],
-    //             SM_Depth_1: item["SM_Depth_1"],  SM_Depth_2: item["SM_Depth_2"], Soil_Temp: item["Soil_Temp"], En_Temp: item["En_Temp"],
-    //             RH: item["RH"], CO2: item["CO2"], Canopi_Temp: item["Canopi_Temp"], Cs_Temp: item["Cs_Temp"], 
-    //             Irrigation_pres_rate: item["Irrigation_pres_rate"], Irrigation_pres_Tim: item["Irrigation_pres_Tim"], Date_Time: item["Date_Time"]
-    //          }
-        
- 
-    //           ]
-    //         }
-    //     );
-    //     }
-        console.log ('data', data);
+
+
         return(
            <React.Fragment>
                 <div className='ContainerTable'>
                 <h4 className='titulo'> Table of Treatment:</h4>
                 <div className="scrollable tableFixHead">
                 { dataTab.length >0 && (
+
                     // eslint-disable-next-line react/style-prop-object
                     // <table className="table table-bordered text-center" > 
-                    <table id="dtHorizontalVerticalExample" className="table table-striped table-bordered table-sm scrroll table-fixed" cellspacing="0"
+                    //Tabla de información de todos los datos
+                    <table id="dtHorizontalVerticalExample" className="table table-striped table-bordered table-sm scrroll table-fixed" 
                     width="100%" > 
                     <thead>
                         <tr>
@@ -123,20 +87,29 @@ class TreatmentTable extends React.Component{
                         <td>{item["Date_Time"]}</td>
 
                         </tr>
-                        )})
+                        )}
+                        
+
+                        
+                        )
 
                         }
 
                     </tbody>
                     </table>
                     )}
-                </div>
-                {/* { data.length > 0 && (
 
-                <CSVLink data={data} headers={headers} separator={";"}>
-                Download me
-                </CSVLink>
-                )} */}
+                </div>
+            {/* condición para lectura y asignación del diccionario para el archivo cssv */}
+             { dataTab.length > 0 && (
+
+            <CSVLink data={dataTab} headers={headers} separator={";"}>
+                <button className='buttondown'>
+                    Download Table
+                </button>
+            </CSVLink>
+
+                )}
                 </div>
 
            </React.Fragment> 
