@@ -21,8 +21,8 @@ fetchData = async () => {
   this.setState({loading: true, error: null})
 
   try{
-      const response = await fetch('http://localhost:8000/?Treatment='+this.state.treatments2);
-      // const response = await fetch('http://104.248.53.140:8080/sGet.php/?Treatment='+this.state.treatments2);
+      // const response = await fetch('http://localhost:8000/?Treatment='+this.state.treatments2);
+      const response = await fetch('http://104.248.53.140:8080/sGet.php/?Treatment='+this.state.treatments2);
       const data = await response.json();
       this.setState({loading: false, data: data});
 
