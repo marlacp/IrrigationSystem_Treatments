@@ -3,6 +3,7 @@ import TreatmentTable from './treatments_table';
 import TreatmentChart from './treatments_chart';
 import CheckboxChart from './CheckboxChart';
 import '../assets/styles/TreatmentCT-style.css';
+import { Link } from 'react-router-dom';
 class CTChartTable extends React.Component {
   state = { 
     treatments2: this.props.match.params.id,
@@ -44,15 +45,21 @@ render() {
     
   return (
     <React.Fragment>
-
+      <div className="card opacity bg-light">
+          <div className="d-flex flex-row">
+          <div className="p-2"><Link to="/treatments">Treatments</Link></div>
+              <div className="p-2 treat">/ Treatment: {this.state.treatments2}</div>
+          </div>
+      </div>
        <TreatmentTable
+          treat = {this.state.treatments2}
           data = {this.state.data}
         />
         <br/>
         <br/>
         <div className='hero'>
 
-        <h4 className='titulo'> Treatment Graph </h4>
+        <h4 className='titulo'> Chart </h4>
         <div className='ContainerChart'>
           <TreatmentChart 
             data = {this.state.data}

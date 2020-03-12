@@ -1,3 +1,12 @@
+/* .opacity{
+    background-color:rgba(176, 211, 241, 0.9);
+
+} */
+
+.treat{
+    color: #1f6650;
+    font-weight: 535;
+}
 .hero{
     background-color: #fffdf9;
     /*color: colo de la letra*/
@@ -16,3 +25,4 @@
 
     grid-gap: 10px 80px;
 }
+

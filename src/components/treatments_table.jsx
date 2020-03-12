@@ -3,7 +3,7 @@
 import React from 'react';
 import '../assets/styles/TreatTable-style.css';
 // libreria para descargar en archivo csv
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 class TreatmentTable extends React.Component{
     render(){
         var dataTab = {};
@@ -37,7 +37,7 @@ class TreatmentTable extends React.Component{
         return(
            <React.Fragment>
                 <div className='ContainerTable'>
-                <h4 className='titulo'> Table of Treatment:</h4>
+                <h4 className='titulo'> Treatment {this.props.treat} Data:</h4>
                 <div className="scrollable tableFixHead">
                 { dataTab.length >0 && (
 
@@ -105,7 +105,7 @@ class TreatmentTable extends React.Component{
 
             <CSVLink data={dataTab} headers={headers} separator={";"}>
                 <button className='buttondown'>
-                    Download Table
+                    Download Data
                 </button>
             </CSVLink>
 

@@ -5,7 +5,7 @@
 import React from 'react';
 import '../assets/styles/treatments-style.css';
 import { Link } from 'react-router-dom';
-import tratamiento from '../assets/static/Treatment.jpg';
+import tratamiento from '../assets/static/Treatment2.jpg';
 // import CTChartTable from './treatments_chart_table';
 class treatmentsComponent extends React.Component {
 
@@ -29,6 +29,7 @@ class treatmentsComponent extends React.Component {
           <div className='post'
             // onClick={() => handleClickApply(treatments)} 
           >
+            {/* aqui en link se pone el parametro 1  */}
             <Link to="/treatments/1">
             <figure className='post-image'>
               <img src={tratamiento} alt='tratamiento' />
