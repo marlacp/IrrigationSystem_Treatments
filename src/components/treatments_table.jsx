@@ -50,6 +50,7 @@ class TreatmentTable extends React.Component{
                         <tr>
                     
                         <th scope="col">Treatment</th>
+                        <th scope="col">DateTime (YYYY-MM-DD hh:mm:ss)</th>
                         <th scope="col">Longitude</th>
                         <th scope="col">Latitude</th>
                         <th scope="col">SM Depth 1 (%)</th>
@@ -62,7 +63,6 @@ class TreatmentTable extends React.Component{
                         <th scope="col">CS Temp  (°C)</th>
                         <th scope="col">Irrig Pres Rate (mm)</th>
                         <th scope="col">Irrig Pres Time (mm) </th>
-                        <th scope="col">DateTime (YYYY-MM-DD hh:mm:ss)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -72,6 +72,7 @@ class TreatmentTable extends React.Component{
                         <tr>
                         
                         <td>{item["Treatment"]}</td>
+                        <td>{item["Date_Time"]}</td>
                         <td>{item["Longitude"]}</td>
                         <td>{item["Latitude"]}</td>
                         <td>{item["SM_Depth_1"]}</td>
@@ -84,7 +85,6 @@ class TreatmentTable extends React.Component{
                         <td>{item["CS_Temp"]}</td>
                         <td>{item["Irrig_Pres_Rate"]}</td>
                         <td>{item["Irrig_Pres_Time"]}</td>
-                        <td>{item["Date_Time"]}</td>
 
                         </tr>
                         )}
