@@ -30,7 +30,7 @@ class treatmentsComponent extends React.Component {
             // onClick={() => handleClickApply(treatments)} 
           >
             {/* aqui en link se pone el parametro 1  */}
-            <Link to="/treatments/1">
+            <Link to="/treatments/1/1">
             <figure className='post-image'>
               <img src={tratamiento} alt='tratamiento' />
             </figure>
@@ -51,7 +51,7 @@ class treatmentsComponent extends React.Component {
 
 
           <div className='post'>
-           <Link to="/treatments/2">
+           <Link to="/treatments/2/1">
             <figure className='post-image'>
               <img src={tratamiento} alt='tratamiento' />
             </figure>
@@ -63,7 +63,7 @@ class treatmentsComponent extends React.Component {
 
 
           <div className='post'>
-          <Link to="/treatments/3">
+          <Link to="/treatments/3/1">
             <figure className='post-image'>
               <img src={tratamiento} alt='tratamiento' />
             </figure>
@@ -74,7 +74,7 @@ class treatmentsComponent extends React.Component {
           </div>
 
           <div className='post'>
-          <Link to="/treatments/4">
+          <Link to="/treatments/4/1">
             <figure className='post-image'>
               <img src={tratamiento} alt='tratamiento' />
             </figure>

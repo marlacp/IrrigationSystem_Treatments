@@ -18,7 +18,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/treatments' component={treatmentsComponent} />
-        <Route exact path='/treatments/:id' component={CTChartTable} />
+        <Route exact path='/treatments/:id/:hour' component={CTChartTable} />
         <Route exact path='/AboutUs' component={AboutUs} />
         <Route component={NotFound} />
       </Switch>
