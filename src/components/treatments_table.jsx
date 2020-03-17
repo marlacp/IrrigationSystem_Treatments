@@ -39,6 +39,12 @@ class TreatmentTable extends React.Component{
                 <div className='ContainerTable'>
                 <h4 className='titulo'> Treatment {this.props.treat} Data:</h4>
                 <div className="scrollable tableFixHead">
+
+                { dataTab.length === 0 && (
+
+                    <div>No hay datos mi perro</div>
+
+                )}
                 { dataTab.length >0 && (
 
                     // eslint-disable-next-line react/style-prop-object
