@@ -266,7 +266,7 @@ class TreatmentChart extends React.Component{
             },  { // 2 yAxis
                 gridLineWidth: 0,
                 title: {
-                    text: 'SM Depth (%)',
+                    text: 'SM (%)',
                     style: {
                         color: Highcharts.getOptions().colors[0]
                     }
@@ -297,9 +297,27 @@ class TreatmentChart extends React.Component{
                 },
                 opposite: true
             }, 
+
+            { 
+                // 4  yAxis
+                gridLineWidth: 0,
+                title: {
+                    text: 'SM 2(kPa)',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                  
+                },
+            }, 
             
             // { 
-            //     // 4 yAxis
+            //     // 5 yAxis
             //     gridLineWidth: 0,
             //     title: {
             //         text: 'CO2 (PPM)',
@@ -368,10 +386,10 @@ class TreatmentChart extends React.Component{
                 }
         
             },
-            {
-                name: 'Soil Temp',
+            { // se reemplaza sm3 por soil temp
+                name: 'SM 3',
                 type: 'spline',
-                yAxis: 0,
+                yAxis: 2,
         
                 data: Soil_Temp,
                 marker: {
@@ -379,7 +397,7 @@ class TreatmentChart extends React.Component{
                 },
                 dashStyle: 'shortdot',
                 tooltip: {
-                    valueSuffix: ' °C'
+                    valueSuffix: ' %'
                 }
         
             },
@@ -446,7 +464,7 @@ class TreatmentChart extends React.Component{
             // }, 
             
             {
-                name: 'SM Depth 1 ',
+                name: 'SM 1',
                 type: 'spline',
                 yAxis: 2,
         
@@ -461,9 +479,9 @@ class TreatmentChart extends React.Component{
         
             },
             {
-                name: 'SM Depth 2',
+                name: 'SM 2',
                 type: 'spline',
-                yAxis: 2,
+                yAxis: 4,
         
                 data: SM_Depth_2,
                 marker: {
@@ -471,7 +489,7 @@ class TreatmentChart extends React.Component{
                 },
                 dashStyle: 'shortdot',
                 tooltip: {
-                    valueSuffix: ' %'
+                    valueSuffix: ' kPa'
                 }
         
             },        

@@ -39,10 +39,11 @@ class TreatmentTable extends React.Component{
                 <div className='ContainerTable'>
                 <h4 className='titulo'> Treatment {this.props.treat} Data:</h4>
                 <div className="scrollable tableFixHead">
-
+                
+                {/* condicion cuando no hay datos */}
                 { dataTab.length === 0 && (
 
-                    <div>No hay datos mi perro</div>
+                    <div className='Nodatos'>There is no data</div>
 
                 )}
                 { dataTab.length >0 && (
@@ -59,9 +60,9 @@ class TreatmentTable extends React.Component{
                         <th scope="col">DateTime (YYYY-MM-DD hh:mm:ss)</th>
                         <th scope="col">Longitude</th>
                         <th scope="col">Latitude</th>
-                        <th scope="col">SM Depth 1 (%)</th>
-                        <th scope="col">SM Depth 2 (%)</th>
-                        <th scope="col">Soil Temp (°C)</th>
+                        <th scope="col">SM 1(%)</th>
+                        <th scope="col">SM 2 (kPa)</th>
+                        <th scope="col">SM 3 (%)</th>
                         <th scope="col">Env Temp (°C)</th>
                         <th scope="col">RH (%)</th>
                         {/* <th scope="col">CO2 (ppm)</th> */}

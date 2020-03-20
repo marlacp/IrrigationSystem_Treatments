@@ -67,7 +67,7 @@ render(){
                 >
                     <input type="checkbox" 
                     value="SM_Depth_1" /> 
-                    <span className="label-text">SM Depth1</span>
+                    <span className="label-text">SM 1</span>
                 </label>
                 <br />
                 <label
@@ -75,7 +75,7 @@ render(){
                 onChange= {this.GetYaxis}
                 >
                     <input type="checkbox" value="SM_Depth_2" /> 
-                    <span className="label-text">SM Depth2</span>
+                    <span className="label-text">SM 2</span>
                 </label>
                 <br />
                 <label
@@ -83,7 +83,7 @@ render(){
                 onChange= {this.GetYaxis}
                 >
                     <input type="checkbox" value="Soil_Temp" /> 
-                    <span className="label-text">Soil Temp</span>
+                    <span className="label-text">SM 3</span>
                 </label>
                 <br />
                 <label
