@@ -9,9 +9,9 @@ constructor(props){
     this.state = {
         // Yaxis: new Map(),
         Yaxis: {
-            'SM_Depth_1':false,
-            'SM_Depth_2':false,
-            'Soil_Temp':false,
+            'SM_1':false,
+            'SM_2':false,
+            'SM_3':false,
             'Env_Temp':false,
             'RH':false,
             'CO2':false,
@@ -66,7 +66,7 @@ render(){
                 onChange= {this.GetYaxis}
                 >
                     <input type="checkbox" 
-                    value="SM_Depth_1" /> 
+                    value="SM_1" /> 
                     <span className="label-text">SM 1</span>
                 </label>
                 <br />
@@ -74,7 +74,7 @@ render(){
                 value={this.state.value}
                 onChange= {this.GetYaxis}
                 >
-                    <input type="checkbox" value="SM_Depth_2" /> 
+                    <input type="checkbox" value="SM_2" /> 
                     <span className="label-text">SM 2</span>
                 </label>
                 <br />
@@ -82,7 +82,7 @@ render(){
                 value={this.state.value}
                 onChange= {this.GetYaxis}
                 >
-                    <input type="checkbox" value="Soil_Temp" /> 
+                    <input type="checkbox" value="SM_3" /> 
                     <span className="label-text">SM 3</span>
                 </label>
                 <br />

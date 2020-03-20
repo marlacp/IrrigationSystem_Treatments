@@ -19,9 +19,9 @@ class TreatmentTable extends React.Component{
             { label: "Treatment", key: "Treatment" },
             { label: "Longitude", key: "Longitude" },
             { label: "Latitude", key: "Latitude" },
-            { label: "SM Depth 1 (%)", key: "SM_Depth_1" },
-            { label: "SM Depth 2 (%)", key: "SM_Depth_2" },
-            { label: "Soil Temp (°C)", key: "Soil_Temp" },
+            { label: "SM 1 (%)", key: "SM_1" },
+            { label: "SM 2(kPa)", key: "SM_2" },
+            { label: "SM 3(%)", key: "SM_3" },
             { label: "Env Temp (°C)", key: "Env_Temp" },
             { label: "RH (%)", key: "RH" },
             // { label: "CO2 (PPM)", key: "CO2" },
@@ -82,9 +82,9 @@ class TreatmentTable extends React.Component{
                         <td>{item["Date_Time"]}</td>
                         <td>{item["Longitude"]}</td>
                         <td>{item["Latitude"]}</td>
-                        <td>{item["SM_Depth_1"]}</td>
-                        <td>{item["SM_Depth_2"]}</td>
-                        <td>{item["Soil_Temp"]}</td>
+                        <td>{item["SM_1"]}</td>
+                        <td>{item["SM_2"]}</td>
+                        <td>{item["SM_3"]}</td>
                         <td>{item["Env_Temp"]}</td>
                         <td>{item["RH"]}</td>
                         {/* <td>{item["CO2"]}</td> */}

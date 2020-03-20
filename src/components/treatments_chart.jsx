@@ -64,9 +64,9 @@ class TreatmentChart extends React.Component{
     
 // Validacion variables boleanas eje Y 
     
-        var SM_Depth_1 = [];
-        var SM_Depth_2 = [];
-        var Soil_Temp = [];
+        var SM_1 = [];
+        var SM_2 = [];
+        var SM_3 = [];
         var Env_Temp = [];
         var RH = [];
         // var CO2 = [];
@@ -89,16 +89,16 @@ class TreatmentChart extends React.Component{
             
     
     
-            // Variable SM_Depth_1
-            if(Yaxis2['SM_Depth_1'] === true){
+            // Variable SM_1
+            if(Yaxis2['SM_1'] === true){
                 datadic.map(
                     function(item, i){
-                        SM_Depth_1 = SM_Depth_1.concat(item["SM_Depth_1"]);
+                        SM_1 = SM_1.concat(item["SM_1"]);
                     }
                 );
                 
-                for ( var c = 0; c < SM_Depth_1.length; c++ ){
-                    SM_Depth_1[c] = parseFloat(SM_Depth_1[c]);
+                for ( var c = 0; c < SM_1.length; c++ ){
+                    SM_1[c] = parseFloat(SM_1[c]);
                 }
             }
             // Variable RH
@@ -113,29 +113,29 @@ class TreatmentChart extends React.Component{
                     RH[d] = parseFloat(RH[d]);
                 }
             }
-            // variable SM_Depth_2
+            // variable SM_2
     
-            if(Yaxis2['SM_Depth_2'] === true){
+            if(Yaxis2['SM_2'] === true){
                 datadic.map(
                     function(item, i){
-                        SM_Depth_2 = SM_Depth_2.concat(item["SM_Depth_2"]);
+                        SM_2 = SM_2.concat(item["SM_2"]);
                     }
                 );
                 
-                for ( var e = 0; e < SM_Depth_2.length; e++ ){
-                    SM_Depth_2[e] = parseFloat(SM_Depth_2[e]);
+                for ( var e = 0; e < SM_2.length; e++ ){
+                    SM_2[e] = parseFloat(SM_2[e]);
                 }
             }
-            // variable Soil_Temp
-            if(Yaxis2['Soil_Temp'] === true){
+            // variable SM_3
+            if(Yaxis2['SM_3'] === true){
                 datadic.map(
                     function(item, i){
-                        Soil_Temp = Soil_Temp.concat(item["Soil_Temp"]);
+                        SM_3 = SM_3.concat(item["SM_3"]);
                     }
                 );
                 
-                for ( var f = 0; f < Soil_Temp.length; f++ ){
-                    Soil_Temp[f] = parseFloat(Soil_Temp[f]);
+                for ( var f = 0; f < SM_3.length; f++ ){
+                    SM_3[f] = parseFloat(SM_3[f]);
                 }
             }
             // variable Env_Temp 
@@ -391,7 +391,7 @@ class TreatmentChart extends React.Component{
                 type: 'spline',
                 yAxis: 2,
         
-                data: Soil_Temp,
+                data: SM_3,
                 marker: {
                     enabled: false
                 },
@@ -468,7 +468,7 @@ class TreatmentChart extends React.Component{
                 type: 'spline',
                 yAxis: 2,
         
-                data: SM_Depth_1 ,
+                data: SM_1 ,
                 marker: {
                     enabled: false
                 },
@@ -483,7 +483,7 @@ class TreatmentChart extends React.Component{
                 type: 'spline',
                 yAxis: 4,
         
-                data: SM_Depth_2,
+                data: SM_2,
                 marker: {
                     enabled: false
                 },
