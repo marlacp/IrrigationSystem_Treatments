@@ -7,7 +7,17 @@ import { CSVLink } from "react-csv";
 class TreatmentTable extends React.Component{
     render(){
         var dataTab = {};
+        console.log('dataTab', dataTab.length);
+        console.log('dataTab2', this.props.data);
+        
         dataTab = (this.props.data);
+
+        var control;
+
+        if (dataTab === null){
+            control = 1;
+        }
+
 
         if (dataTab === null){
             return null;
@@ -41,7 +51,7 @@ class TreatmentTable extends React.Component{
                 <div className="scrollable tableFixHead">
                 
                 {/* condicion cuando no hay datos */}
-                { dataTab.length === 0 && (
+                { control === 1 && (
 
                     <div className='Nodatos'>There is no data</div>
 
