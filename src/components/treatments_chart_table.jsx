@@ -202,14 +202,16 @@ render() {
 
         <h4 className='titulo'> Chart </h4>
         <div className='ContainerChart'>
+    
           <TreatmentChart 
             data = {this.state.data}
             Yaxis = {this.state.AxisY}
-          />
+            />
+
+        {this.state.data !== null &&(
           <CheckboxChart 
           handleClickApply = {this.handleClickApply}
-          /> 
-
+          /> )}
         </div>
         </div>
     </React.Fragment> 
