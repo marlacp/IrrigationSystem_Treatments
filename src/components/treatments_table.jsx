@@ -51,11 +51,11 @@ class TreatmentTable extends React.Component{
                 <div className="scrollable tableFixHead">
                 
                 {/* condicion cuando no hay datos */}
-                { control === 1 && (
+                {/* { control === 1 && (
 
                     <div className='Nodatos'>There is no data</div>
 
-                )}
+                )} */}
                 { dataTab.length >0 && (
 
                     // eslint-disable-next-line react/style-prop-object

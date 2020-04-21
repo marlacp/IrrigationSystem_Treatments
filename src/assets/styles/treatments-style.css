@@ -82,10 +82,10 @@
 
   .post-comments {
     width: 293px;
-    height: 230px;
+    height: 173px;
     margin: 0px;
     font-weight: bold;/*peso de fuente negrita*/
-    text-align: center;/*alinear en el centro*/
+    text-align: end;/*alinear en el centro*/
     display: inline-block;/*para que este uno al costado del otro*/
     /* color: #1b262c; */
     color: #fcf8e8;

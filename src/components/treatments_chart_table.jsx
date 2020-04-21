@@ -74,7 +74,7 @@ render() {
   // if (this.state.error) {
   //   return <PageError error={this.state.error} />;
   // }
-
+  console.log('datossnjsjnjs: ',this.state.data)
   return (
     <React.Fragment>
       <div className="card opacity bg-light">
@@ -187,6 +187,11 @@ render() {
 
       </div>
       <br/>
+      { this.state.data !== 'null' && (
+
+          <div className='Nodatos'>There is no data</div>
+
+      )}
        <TreatmentTable
           treat = {this.state.treatments2}
           data = {this.state.data}
