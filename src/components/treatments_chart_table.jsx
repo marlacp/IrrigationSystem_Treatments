@@ -187,9 +187,9 @@ render() {
 
       </div>
       <br/>
-      { this.state.data !== 'null' && (
+      { this.state.data === null && (
 
-          <div className='Nodatos'>There is no data</div>
+          <div className='Nodatos'>Sorry, no data in last {this.state.hour} hours</div>
 
       )}
        <TreatmentTable
